@@ -226,7 +226,7 @@ get_header(); ?>
         jQuery('.nav-link').each(function () {
             var currLink = jQuery(this);
             var refElement = jQuery(currLink.attr("href"));
-            if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
+            if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height() ) < 0 ) {
                 jQuery('.nav-link').removeClass("active-underline");
                 jQuery('#menu-item-138 a').addClass("active-underline");
             }
