@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="py-5 d-flex align-items-center" id="home"<?php 
+<div class="py-5 min-vh-100 d-flex align-items-center" id="home"<?php 
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
     style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
@@ -196,7 +196,7 @@ get_header(); ?>
         //     }
         // });
         
-        jQuery('#home > .container').css('margin-top', jQuery('.navbar').height());
+        jQuery('#home > .container').css('margin-top', (jQuery('.navbar').height() * 0.55));
 
         jQuery(document).on("scroll", onScroll);
 
