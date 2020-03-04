@@ -35,7 +35,7 @@ get_header(); ?>
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h2 class="mb-5">Investments</h2>
+                    <?php the_field('investments_title') ?>
                         <br>
 
                         <div class="row investment-logos justify-content-center">
@@ -102,7 +102,7 @@ get_header(); ?>
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-12">
-                        <h2 class="mb-5">Team</h2>
+                    <?php the_field('team_title') ?>
                     </div>
                     <?php
 
