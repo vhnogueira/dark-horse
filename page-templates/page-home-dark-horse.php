@@ -13,11 +13,11 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-	<div class="py-5 min-vh-100 d-flex align-items-center"<?php 
-        $image = get_field('intro_background_image');
-        if( !empty( $image ) ): ?>
-        style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
-        <?php endif; ?>>
+<div class="py-5 min-vh-100 d-flex align-items-center" id="home"<?php 
+    $image = get_field('intro_background_image');
+    if( !empty( $image ) ): ?>
+    style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
+    <?php endif; ?>>
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
