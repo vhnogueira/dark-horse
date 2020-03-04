@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="py-5 min-vh-100 d-flex align-items-center" id="home"<?php 
+<div class="py-5 d-flex align-items-center" style="min-height: calc(100vh - 140px);" id="home"<?php 
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
     style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
@@ -31,7 +31,7 @@ get_header(); ?>
     <p>
 
     <section id="investments">
-        <div class="py-5 d-flex align-items-center" style="min-height: calc(100vh - 140px);">
+        <div class="py-5 d-flex min-vh-100 align-items-center">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
