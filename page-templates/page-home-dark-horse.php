@@ -31,7 +31,7 @@ get_header(); ?>
     <p>
 
     <section id="investments">
-        <div class="py-5 min-vh-100 d-flex align-items-center">
+        <div class="py-5 d-flex align-items-center" style="min-height: calc(100vh - 100px);">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
