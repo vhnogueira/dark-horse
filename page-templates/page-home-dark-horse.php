@@ -195,6 +195,8 @@ get_header(); ?>
         //         // jQuery('#wrapper-navbar').removeClass('fixed-top');
         //     }
         // });
+        
+        jQuery('#home > .container').css('margin-top', jQuery('.navbar').height());
 
         jQuery(document).on("scroll", onScroll);
 
