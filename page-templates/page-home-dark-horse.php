@@ -18,7 +18,7 @@ get_header(); ?>
     if( !empty( $image ) ): ?>
     style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
     <?php endif; ?>>
-        <div class="container" id="<?php the_field('home_id')?>">
+        <div class="container" id="<?php the_field('home_id')?>" style="margin-top: 140px;"> 
             <div class="row text-center">
                 <div class="col-md-12">
                     <?php the_field('intro_title') ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 
     <section>
         <div class="py-5 d-flex min-vh-100 align-items-center">
-            <div class="container" id="<?php the_field('portfolio_id')?>" style="margin-top: 140px;">
+            <div class="container" id="<?php the_field('portfolio_id')?>">
                 <div class="row text-center">
                     <div class="col-md-12">
                     <?php the_field('investments_title') ?>
