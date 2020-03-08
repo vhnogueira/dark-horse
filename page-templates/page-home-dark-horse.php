@@ -100,8 +100,8 @@ get_header(); ?>
     <section>
         <div class="py-5 min-vh-100 d-flex align-items-center bg-light">
             <div class="container" id="<?php the_field('team_id')?>">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
                     <?php the_field('team_title') ?>
                     </div>
                     <?php
@@ -112,7 +112,7 @@ get_header(); ?>
                         // loop through the rows of data
                         while ( have_rows('team') ) : the_row(); ?>
                         
-                        <div class="col-md-4 mb-4 mb-md-0 align-self-center">
+                        <div class="col-md-3 mb-4 mb-md-0 align-self-center">
 
                             <?php // display a sub field value
                             $image = get_sub_field('image');
@@ -123,8 +123,8 @@ get_header(); ?>
 
                         </div>
 
-                        <div class="col-md-8 mb-4 mb-md-0 align-self-center">
-                            <p class="h3 text-center"><?php the_sub_field('name'); ?></p>
+                        <div class="col-md-7 offset-md-1 mb-4 mb-md-0 align-self-center">
+                            <p class="h3 text-left"><?php the_sub_field('name'); ?></p>
                             <p class="h5"><?php the_sub_field('role'); ?></p>
                             <p><?php the_sub_field('description'); ?></p>
 
