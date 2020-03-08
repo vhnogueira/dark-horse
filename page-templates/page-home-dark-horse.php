@@ -13,12 +13,12 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="py-5 min-vh-100 d-flex align-items-center" id="home"<?php 
+<div class="py-5 min-vh-100 d-flex align-items-center"<?php 
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
     style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
     <?php endif; ?>>
-        <div class="container">
+        <div class="container" id="<?php the_field('home_id')?>">
             <div class="row text-center">
                 <div class="col-md-12">
                     <?php the_field('intro_title') ?>
@@ -30,9 +30,9 @@ get_header(); ?>
 
     <p>
 
-    <section id="investments">
+    <section>
         <div class="py-5 d-flex min-vh-100 align-items-center">
-            <div class="container">
+            <div class="container" id="<?php the_field('portfolio_id')?>">
                 <div class="row text-center">
                     <div class="col-md-12">
                     <?php the_field('investments_title') ?>
@@ -97,9 +97,9 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="team">
+    <section>
         <div class="py-5 min-vh-100 d-flex align-items-center bg-light">
-            <div class="container">
+            <div class="container" id="<?php the_field('team_id')?>">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-12">
                     <?php the_field('team_title') ?>
