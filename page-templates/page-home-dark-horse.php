@@ -32,7 +32,7 @@ get_header(); ?>
 
     <section>
         <div class="py-5 d-flex min-vh-100 align-items-center">
-            <div class="container" id="<?php the_field('portfolio_id')?>">
+            <div class="container" id="<?php the_field('portfolio_id')?>" style="margin-top: 140px;">
                 <div class="row text-center">
                     <div class="col-md-12">
                     <?php the_field('investments_title') ?>
@@ -196,7 +196,7 @@ get_header(); ?>
         //     }
         // });
         
-        jQuery('#<?php the_field('home_id') ?>').css('margin-top', (jQuery('.navbar').height()));
+        // jQuery('#<?php // the_field('home_id') ?>').css('margin-top', (jQuery('.navbar').height()));
 
         jQuery(document).on("scroll", onScroll);
 
