@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="pt-5 min-vh-100 d-flex align-items-center"<?php 
+<div class="pb-5 min-vh-100 d-flex align-items-center"<?php 
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
     style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
