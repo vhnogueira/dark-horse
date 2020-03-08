@@ -123,7 +123,7 @@ get_header(); ?>
 
                         </div>
 
-                        <div class="col-md-7 offset-md-1 mb-4 mb-md-0 align-self-center">
+                        <div class="col-md-8 mb-4 mb-md-0 align-self-center">
                             <p class="h3 text-left "><?php the_sub_field('name'); ?></p>
                             <p class="h5 "><?php the_sub_field('role'); ?></p>
                             <p><?php the_sub_field('description'); ?></p>
