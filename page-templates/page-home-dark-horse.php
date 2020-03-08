@@ -196,7 +196,7 @@ get_header(); ?>
         //     }
         // });
         
-        jQuery('<?php the_field('home_id') ?>').css('margin-top', (jQuery('.navbar').height()));
+        jQuery('#<?php the_field('home_id') ?>').css('margin-top', (jQuery('.navbar').height()));
 
         jQuery(document).on("scroll", onScroll);
 
