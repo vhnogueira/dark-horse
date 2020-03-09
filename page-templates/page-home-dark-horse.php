@@ -112,7 +112,7 @@ get_header(); ?>
                         // loop through the rows of data
                         while ( have_rows('team') ) : the_row(); ?>
                         
-                        <div class="col-md-9 offset-md-2 mb-4 mb-md-0 align-self-center">
+                        <div class="col-md-3 offset-md-3 mb-4 mb-md-0 align-self-center">
 
                             <?php // display a sub field value
                             $image = get_sub_field('image');
