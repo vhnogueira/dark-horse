@@ -25,8 +25,8 @@ get_header(); ?>
         </style>
 <?php endif; ?>
 
-<div class="pb-5 min-vh-100 d-flex align-items-center"  id="<?php the_field('home_id')?>">
-        <div class="container" style="margin-top: 160px;"> 
+<div class="py-5 min-vh-100 d-flex align-items-center"  id="<?php the_field('home_id')?>">
+        <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
                     <?php the_field('intro_title') ?>
