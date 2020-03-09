@@ -112,13 +112,14 @@ get_header(); ?>
                         // loop through the rows of data
                         while ( have_rows('team') ) : the_row(); ?>
                         
-                        <div class="col-md-3 offset-md-3 mb-4 mb-md-0 align-self-center">
+                        <div class="col-md-9 offset-md-2 mb-4 mb-md-0 align-self-center">
 
                             <?php // display a sub field value
+                            
                             $image = get_sub_field('image');
                             
                             if( !empty( $image ) ): ?>
-                                <img src="<?php echo esc_url($image['url']); ?>" class="img-fluid mx-auto d-block mb-3 mb-md-2" alt="<?php the_sub_field('name'); ?>" />
+                                <img src="<?php echo esc_url($image['url']); ?>" class="mb-4 img-fluid mx-auto d-block mb-3 mb-md-2" alt="<?php the_sub_field('name'); ?>" />
                             <?php endif; ?>
 
                         </div>
