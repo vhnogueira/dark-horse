@@ -115,7 +115,6 @@ get_header(); ?>
                         <div class="col-md-9 offset-md-2 mb-4 mb-md-0 align-self-center">
 
                             <?php // display a sub field value
-                            
                             $image = get_sub_field('image');
                             
                             if( !empty( $image ) ): ?>
