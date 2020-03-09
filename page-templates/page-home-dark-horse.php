@@ -13,11 +13,19 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="pb-5 min-vh-100 d-flex align-items-center"<?php 
+<?php 
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
-    style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
-    <?php endif; ?>  id="<?php the_field('home_id')?>">
+        <style>
+            #home {
+                background: url(<?php echo esc_url($image['url']); ?>);
+                background-size:cover; 
+                background-position: center;
+            }
+        </style>
+<?php endif; ?>
+
+<div class="pb-5 min-vh-100 d-flex align-items-center"  id="<?php the_field('home_id')?>">
         <div class="container" style="margin-top: 160px;"> 
             <div class="row text-center">
                 <div class="col-md-12">
