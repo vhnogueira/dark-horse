@@ -188,6 +188,9 @@ get_header(); ?>
     });
     
     jQuery(document).ready(function () {
+
+        var h = jQuery('nav').height();
+        jQuery('.min-vh-100').attr('style', 'min-height: calc(100vh - ' + h + 'px) !important');
         // jQuery(window).scroll(function() {
         //     var window_top = jQuery(window).scrollTop() + 50;
         //     // the "50" should equal the margin-top value for nav.stickydiv
