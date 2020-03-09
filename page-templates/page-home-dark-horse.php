@@ -17,11 +17,11 @@ get_header(); ?>
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
         <style>
-            #home {
-                background: url(<?php echo esc_url($image['url']); ?>);
-                background-size:cover; 
-                background-position: center;
-            }
+        #home {
+            background: url(<?php echo esc_url($image['url']); ?>);
+            background-size:cover; 
+            background-position: center;
+        }
         </style>
 <?php endif; ?>
 
