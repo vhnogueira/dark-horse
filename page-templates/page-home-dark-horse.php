@@ -17,8 +17,8 @@ get_header(); ?>
     $image = get_field('intro_background_image');
     if( !empty( $image ) ): ?>
     style="background: url(<?php echo esc_url($image['url']); ?>);background-size:cover; background-position: center;"
-    <?php endif; ?>>
-        <div class="container" id="<?php the_field('home_id')?>" style="margin-top: 160px;"> 
+    <?php endif; ?>  id="<?php the_field('home_id')?>">
+        <div class="container" style="margin-top: 160px;"> 
             <div class="row text-center">
                 <div class="col-md-12">
                     <?php the_field('intro_title') ?>
