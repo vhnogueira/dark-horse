@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="row">
             
-            <div class="col-md-12">
+            <div class="col-md-8">
 				<?php echo wp_get_attachment_image( 325), 'full', "", array( "class" => "img-fluid mx-auto d-block" ) );  ?>
             </div>
 
