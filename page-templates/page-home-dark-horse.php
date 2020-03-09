@@ -31,8 +31,8 @@ get_header(); ?>
     <p>
 
     <section>
-        <div class="py-5 d-flex min-vh-100 align-items-center">
-            <div class="container" id="<?php the_field('portfolio_id')?>">
+        <div class="py-5 d-flex min-vh-100 align-items-center" id="<?php the_field('portfolio_id')?>">
+            <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
                     <?php the_field('investments_title') ?>
@@ -98,8 +98,8 @@ get_header(); ?>
     </section>
 
     <section>
-        <div class="py-5 min-vh-100 d-flex align-items-center bg-light">
-            <div class="container" id="<?php the_field('team_id')?>">
+        <div class="py-5 min-vh-100 d-flex align-items-center bg-light" id="<?php the_field('team_id')?>">
+            <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                     <?php the_field('team_title') ?>
