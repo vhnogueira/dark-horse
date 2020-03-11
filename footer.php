@@ -53,7 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <script>
     var scroll = new SmoothScroll('a[href*="#"]',{
 		// header: '.navbar-brand'
-		offset: jQuery('.navbar-brand').outerHeight(),
+		offset: jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height(),
 	});
 	
 	 jQuery(function(){ 
