@@ -155,7 +155,7 @@ get_header(); ?>
 
     <?php } else { ?>
         <script>
-            jQuery('a[href="#<?php the_field('team_id')?>"]').remove();
+            jQuery('a[href="#<?php the_field('team_id')?>"]').hide();
         </script>
     <?php } ?>
 
@@ -244,28 +244,20 @@ get_header(); ?>
     function onScroll(event) {
         var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
         var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + 500;
-        // console.log(scrollPos);
+        console.log(scrollPos);
         jQuery('.nav-link').each(function () {
             var currLink = jQuery(this);
             var refElement = jQuery(currLink.attr("href"));
-            // if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
-            //     jQuery('.nav-link').removeClass("active-underline");
-            //     jQuery('#menu-item-138 a').addClass("active-underline");
-            // }
-            // else 
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
+                jQuery('.nav-link').removeClass("active-underline");
+                jQuery('#menu-item-138 a').addClass("active-underline");
+            }
+            else if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 jQuery('.nav-link').removeClass("active-underline");
                 currLink.addClass("active-underline");
             } else {
                 currLink.removeClass("active-underline");
                 currLink.removeClass("menu-hover");
-            }
-            if ( jQuery('#team').length && jQuery('#team').position().top > scrollPos ) {
-                jQuery('.nav-link').removeClass("active-underline");
-                jQuery('#menu-item-138 a').addClass("active-underline");
-            } else if ( jQuery('#portfolio').position().top > scrollPos ) {
-                jQuery('.nav-link').removeClass("active-underline");
-                jQuery('#menu-item-138 a').addClass("active-underline");
             }
         });
     };
