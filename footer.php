@@ -51,10 +51,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js" integrity="sha256-CfyPGYLRQ4v1O+mZa5ocQglABXGuaZmmfe8awy8Fxis=" crossorigin="anonymous"></script>
 <script>
-    var scroll = new SmoothScroll('a[href*="#"]',{
-// 		header: '#wrapper-navbar'
-		header: '.navbar-brand'
-	});
+//     var scroll = new SmoothScroll('a[href*="#"]',{
+// // 		header: '#wrapper-navbar'
+// 		header: '.navbar-brand'
+// 	});
 	
 	 jQuery(function(){ 
      var navMain = jQuery(".navbar-collapse"); // avoid dependency on #id
