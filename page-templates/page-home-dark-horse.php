@@ -260,10 +260,10 @@ get_header(); ?>
                 currLink.removeClass("active-underline");
                 currLink.removeClass("menu-hover");
             }
-            if( get_field('display_team') && jQuery('#<?php the_field('team_id'); ?>').position().top > scrollPos ) {
+            if( get_field('display_team') && jQuery('#team').position().top > scrollPos ) {
                 jQuery('.nav-link').removeClass("active-underline");
                 jQuery('#menu-item-138 a').addClass("active-underline");
-            } else if ( jQuery('#<?php the_field('portfolio_id'); ?>').position().top > scrollPos ) {
+            } else if ( jQuery('#portfolio').position().top > scrollPos ) {
                 jQuery('.nav-link').removeClass("active-underline");
                 jQuery('#menu-item-138 a').addClass("active-underline");
             }
