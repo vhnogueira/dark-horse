@@ -210,16 +210,7 @@ get_header(); ?>
 
         var h = jQuery('nav').height();
         jQuery('.min-vh-100').attr('style', 'min-height: calc(100vh - ' + h + 'px) !important');
-        // jQuery(window).scroll(function() {
-        //     var window_top = jQuery(window).scrollTop() + 50;
-        //     // the "50" should equal the margin-top value for nav.stickydiv
-        //     var div_top = jQuery('body').offset().top;
-        //     if (window_top >= div_top) {
-        //         // jQuery('#wrapper-navbar').addClass('fixed-top');
-        //     } else {
-        //         // jQuery('#wrapper-navbar').removeClass('fixed-top');
-        //     }
-        // });
+        jQuery('#home .container').attr('style', 'margin-top: ' + h + 'px');
         
         // jQuery('#<?php // the_field('home_id') ?>').css('margin-top', (jQuery('.navbar').height()));
 
