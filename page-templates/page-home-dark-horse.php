@@ -105,6 +105,11 @@ get_header(); ?>
         </div>
     </section>
 
+    <?php
+
+    if( get_field('display_team') ) { ?>
+      
+
     <section>
         <div class="py-5 min-vh-100 d-flex align-items-center bg-light" id="<?php the_field('team_id')?>">
             <div class="container">
@@ -147,6 +152,8 @@ get_header(); ?>
             </div>
         </div>
     </section>
+
+    <?php } ?>
 
 
     <!-- <div id="contact" class="sticky-section"></div> -->
