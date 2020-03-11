@@ -155,7 +155,7 @@ get_header(); ?>
 
     <?php } else { ?>
         <script>
-            jQuery('a[href="#<?php the_field('team_id')?>"]').hide();
+            jQuery('a[href="#<?php the_field('team_id')?>"]').remove();
         </script>
     <?php } ?>
 
@@ -244,7 +244,7 @@ get_header(); ?>
     function onScroll(event) {
         var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
         var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + 500;
-        console.log(scrollPos);
+        // console.log(scrollPos);
         jQuery('.nav-link').each(function () {
             var currLink = jQuery(this);
             var refElement = jQuery(currLink.attr("href"));
@@ -260,7 +260,7 @@ get_header(); ?>
                 currLink.removeClass("active-underline");
                 currLink.removeClass("menu-hover");
             }
-            if( get_field('display_team') && jQuery('#team').position().top > scrollPos ) {
+            if ( jQuery('#team').length && jQuery('#team').position().top > scrollPos ) {
                 jQuery('.nav-link').removeClass("active-underline");
                 jQuery('#menu-item-138 a').addClass("active-underline");
             } else if ( jQuery('#portfolio').position().top > scrollPos ) {
