@@ -253,7 +253,7 @@ get_header(); ?>
             //     jQuery('#menu-item-138 a').addClass("active-underline");
             // }
             // else 
-            if (refElement.position().top <= scrollPos - 300 && refElement.position().top + refElement.height() > scrollPos - 300) {
+            if (refElement.position().top <= (scrollPos - 300) && refElement.position().top + refElement.height() > (scrollPos - 300)) {
                 jQuery('.nav-link').removeClass("active-underline");
                 currLink.addClass("active-underline");
             } else {
