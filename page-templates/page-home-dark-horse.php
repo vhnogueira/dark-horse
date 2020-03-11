@@ -241,35 +241,27 @@ get_header(); ?>
         });
     });
 
-    // function onScroll(event) {
-    //     var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
-    //     var screenHeight = jQuery(window).height();
-    //     var scrollPos = jQuery(document).scrollTop() + navbarHeight;
-    //     // console.log(scrollscrollPos + (0.1 * screenHeight)Pos);
-    //     jQuery('.nav-link').each(function () {
-    //         var currLink = jQuery(this);
-    //         var refElement = jQuery(currLink.attr("href"));
-            
-    //         if ( refElement.position().top <= scrollPos + (0.2 * screenHeight)  && ( refElement.position().top + refElement.height() ) > scrollPos + (0.2 * screenHeight) ) {
-    //             jQuery('.nav-link').removeClass("active-underline");
-    //             currLink.addClass("active-underline");
-    //         }
-
-
-    //         // if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
-    //         //     jQuery('.nav-link').removeClass("active-underline");
-    //         //     jQuery('#menu-item-138 a').addClass("active-underline");
-    //         // }
-    //         // else if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-    //         //     jQuery('.nav-link').removeClass("active-underline");
-    //         //     currLink.addClass("active-underline");
-    //         // } else {
-    //         //     currLink.removeClass("active-underline");
-    //         //     currLink.removeClass("menu-hover");
-    //         // }
-
-    //     });
-    // };
+    function onScroll(event) {
+        var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
+        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + 500;
+        console.log(scrollPos);
+        jQuery('.nav-link').each(function () {
+            var currLink = jQuery(this);
+            var refElement = jQuery(currLink.attr("href"));
+            // if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
+            //     jQuery('.nav-link').removeClass("active-underline");
+            //     jQuery('#menu-item-138 a').addClass("active-underline");
+            // }
+            // else 
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                jQuery('.nav-link').removeClass("active-underline");
+                currLink.addClass("active-underline");
+            } else {
+                currLink.removeClass("active-underline");
+                currLink.removeClass("menu-hover");
+            }
+        });
+    };
 
     jQuery('.nav-link').on('mouseover', function () {
         jQuery(this).addClass('menu-hover');
