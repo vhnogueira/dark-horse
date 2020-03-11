@@ -243,7 +243,7 @@ get_header(); ?>
 
     function onScroll(event) {
         var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
-        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + 500;
+        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + (0.2 * jQuery(window).height());
         console.log(scrollPos);
         jQuery('.nav-link').each(function () {
             var currLink = jQuery(this);
