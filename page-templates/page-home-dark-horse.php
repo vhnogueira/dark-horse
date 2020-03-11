@@ -243,7 +243,7 @@ get_header(); ?>
 
     function onScroll(event) {
         var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
-        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10;
+        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + 200;
         console.log(scrollPos);
         jQuery('.nav-link').each(function () {
             var currLink = jQuery(this);
@@ -253,7 +253,7 @@ get_header(); ?>
             //     jQuery('#menu-item-138 a').addClass("active-underline");
             // }
             // else 
-            if (refElement.position().top <= (scrollPos + 300) && refElement.position().top + refElement.height() > (scrollPos + 300)) {
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 jQuery('.nav-link').removeClass("active-underline");
                 currLink.addClass("active-underline");
             } else {
