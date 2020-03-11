@@ -153,6 +153,10 @@ get_header(); ?>
         </div>
     </section>
 
+    <?php } else { ?>
+        <script>
+            jQuery('a[href="#team"]').hide();
+        </script>
     <?php } ?>
 
 
