@@ -155,7 +155,7 @@ get_header(); ?>
 
     <?php } else { ?>
         <script>
-            jQuery('a[href="#team"]').hide();
+            jQuery('a[href="#<?php the_field('team_id')?>"]').hide();
         </script>
     <?php } ?>
 
