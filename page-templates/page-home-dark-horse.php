@@ -243,17 +243,16 @@ get_header(); ?>
 
     function onScroll(event) {
         var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
-        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10 + 500;
+        var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10;
         console.log(scrollPos);
         jQuery('.nav-link').each(function () {
             var currLink = jQuery(this);
             var refElement = jQuery(currLink.attr("href"));
-            // if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
-            //     jQuery('.nav-link').removeClass("active-underline");
-            //     jQuery('#menu-item-138 a').addClass("active-underline");
-            // }
-            // else 
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if ( jQuery(document).height() - jQuery(document).scrollTop() - jQuery(window).height()- ( jQuery('#contact').height()/2 ) < 0 ) {
+                jQuery('.nav-link').removeClass("active-underline");
+                jQuery('#menu-item-138 a').addClass("active-underline");
+            }
+            else if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 jQuery('.nav-link').removeClass("active-underline");
                 currLink.addClass("active-underline");
             } else {
