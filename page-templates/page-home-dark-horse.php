@@ -205,6 +205,11 @@ get_header(); ?>
     jQuery('#loginModal').on('hidden.bs.modal', function (e) {
         jQuery('#alert-login').hide();
     });
+
+    jQuery(window).on('resize', function(){
+        jQuery('.min-vh-100:not(#home)').attr('style', 'min-height: calc(100vh - ' + h + 'px) !important');
+        jQuery('#home').attr('style', 'margin-top: ' + h + 'px');
+    });
     
     jQuery(document).ready(function () {
 
