@@ -208,9 +208,9 @@ get_header(); ?>
     
     jQuery(document).ready(function () {
 
-        var h = jQuery('nav').height();
+        var h = jQuery('nav').outerHeight();
         jQuery('.min-vh-100:not(#home)').attr('style', 'min-height: calc(100vh - ' + h + 'px) !important');
-        jQuery('#home .container').attr('style', 'margin-top: ' + h + 'px');
+        jQuery('#home').attr('style', 'margin-top: ' + h + 'px');
         
         // jQuery('#<?php // the_field('home_id') ?>').css('margin-top', (jQuery('.navbar').height()));
 
