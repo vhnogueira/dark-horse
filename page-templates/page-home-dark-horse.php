@@ -207,14 +207,14 @@ get_header(); ?>
     });
 
     jQuery(window).on('resize', function(){
-        var h = jQuery('nav').outerHeight();
+        var h = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
         jQuery('.min-vh-100:not(#home)').attr('style', 'min-height: calc(100vh - ' + h + 'px) !important');
         jQuery('#home').attr('style', 'margin-top: ' + h + 'px; min-height: calc(100vh - ' + h + 'px) !important');
     });
     
     jQuery(document).ready(function () {
 
-        var h = jQuery('nav').outerHeight();
+        var h = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
         jQuery('.min-vh-100:not(#home)').attr('style', 'min-height: calc(100vh - ' + h + 'px) !important');
         jQuery('#home').attr('style', 'margin-top: ' + h + 'px; min-height: calc(100vh - ' + h + 'px) !important');
         
@@ -242,7 +242,7 @@ get_header(); ?>
     });
 
     function onScroll(event) {
-        var navbarHeight = jQuery("#wrapper-navbar").height();
+        var navbarHeight = jQuery('.navbar-brand').outerHeight() + jQuery('nav').outerHeight() - jQuery('nav').height();
         var scrollPos = jQuery(document).scrollTop() + navbarHeight + 10;
         console.log(scrollPos);
         jQuery('.nav-link').each(function () {
