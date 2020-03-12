@@ -249,7 +249,6 @@ get_header(); ?>
 
         var scrollPos = jQuery(document).scrollTop() + navbarHeight + windowHeight / 5 ;
         
-
         // console.log(scrollPos);
 
         jQuery('.nav-link').each(function () {
@@ -257,12 +256,13 @@ get_header(); ?>
             var currLink = jQuery(this);
             var refElement = jQuery(currLink.attr("href"));
 
-            // if ( jQuery(document).height() - jQuery(document).scrollTop() - windowHeight - ( jQuery('#contact').height()/2 ) < 0 ) {
-            //     jQuery('.nav-link').removeClass("active-underline");
-            //     jQuery('#menu-item-138 a').addClass("active-underline");
-            // }
-            // else 
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if ( jQuery(document).height() - jQuery(document).scrollTop() - windowHeight - ( jQuery('#contact').height()/2 ) < 0 ) {
+                jQuery('.nav-link').removeClass("active-underline");
+                jQuery('#menu-item-138 a').addClass("active-underline");
+            }
+            else 
+            
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.outerHeight() > scrollPos) {
                 jQuery('.nav-link').removeClass("active-underline");
                 currLink.addClass("active-underline");
             } else {
